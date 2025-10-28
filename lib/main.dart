@@ -84,7 +84,7 @@ class MyApp extends StatelessWidget {
         '/progress': (context) => const ProgressScreen(),
         '/profile': (context) => const ProfileScreen(),
         '/setting': (context) => const SettingScreen(),
-        '/prayer_time': (context) => const ProgressHomeScreen(),
+        '/progress_home': (context) => const ProgressHomeScreen(),
         '/sholat': (context) => const SholatScreen(),
         '/quran': (context) => const QuranScreen(),
         '/dzikir': (context) => const DzikirScreen(),

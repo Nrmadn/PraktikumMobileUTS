@@ -27,7 +27,7 @@ Aplikasi Gamifikasi Target Ibadah Harian dengan Flutter
 | 3 | Register | `/register` | Pendaftaran akun baru dengan validasi nama, email, dan password |
 | 4 | Home | `/home` | Menampilkan dashboard utama: jadwal sholat, progress harian, kategori ibadah, dan daftar target |
 | 5 | Progress | `/progress` | Menampilkan statistik lengkap: level & poin user, grafik progress 7 hari, statistik per kategori, dan achievements |
-| 6 | Manage Targets | `/prayer_time` | Interface untuk mengelola target: melihat semua target, filter berdasarkan kategori, search, edit, dan delete |
+| 6 | Progress Home | `/progress_home` | Interface untuk mengelola target: melihat semua target, filter berdasarkan kategori, search, edit, dan delete |
 | 7 | Add Target | `/add_target` | Form untuk menambahkan target ibadah baru dengan input nama, kategori, tanggal target, dan catatan |
 | 8 | Edit Target | `/edit_target` | Form untuk mengedit detail target ibadah yang sudah ada |
 | 9 | Prayer Times | `/sholat` | Menampilkan jadwal sholat 5 waktu lengkap dengan highlight sholat berikutnya dan countdown |

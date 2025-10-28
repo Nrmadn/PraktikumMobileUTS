@@ -58,7 +58,7 @@ Tap icon **Target Ibadah Harian** di home screen smartphone Anda. Aplikasi akan 
 - Tap tombol **"Masuk"**
 
 **Akun Demo untuk Testing:**
-- Email: `Nirma@mail.com`
+- Email: `Nirma@gmail.com`
 - Password: `nirma123`
 
 ### 3. Navigasi Dashboard (Home)

@@ -16,22 +16,15 @@ import 'screens/quran_screen.dart';
 import 'screens/sedekah_screen.dart';
 import 'screens/dzikir_screen.dart';
 
-// =====================================================
-// 📍 ENTRY POINT APLIKASI
-// =====================================================
-// Ini adalah file utama yang menjalankan aplikasi
+//Ini adalah file utama yang menjalankan aplikasi
 // Sekarang dengan check login status menggunakan SharedPreferences
 
 void main() async {
-  // =====================================================
-  // ⚙️ INITIALIZE FLUTTER BINDING
-  // =====================================================
+  //  INITIALIZE FLUTTER BINDING
   // Pastikan Flutter sudah siap sebelum menggunakan plugins
   WidgetsFlutterBinding.ensureInitialized();
 
-  // =====================================================
-  // 🔐 CHECK LOGIN STATUS
-  // =====================================================
+  //  CHECK LOGIN STATUS
   final prefs = await SharedPreferences.getInstance();
   bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
 
@@ -50,29 +43,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // =====================================================
-      // 🎨 KONFIGURASI DASAR
-      // =====================================================
+     
+      // KONFIGURASI DASAR
       title: appName,
       debugShowCheckedModeBanner: false,
 
-      // =====================================================
-      // 🎨 THEME APLIKASI
-      // =====================================================
+      //  THEME APLIKASI
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.light,
 
-      // =====================================================
-      // 🏠 HALAMAN PERTAMA YANG DITAMPILKAN
-      // =====================================================
+      // HALAMAN PERTAMA YANG DITAMPILKAN
       // Jika sudah login → ke Home Screen
       // Jika belum login → ke Splash Screen
       home: isLoggedIn ? const HomeScreen() : const SplashScreen(),
 
-      // =====================================================
-      // 🧭 ROUTING / NAVIGATION
-      // =====================================================
+      //  ROUTING / NAVIGATION
       // Named routes untuk navigation antar halaman
       routes: {
         '/splash': (context) => const SplashScreen(),
@@ -91,9 +77,7 @@ class MyApp extends StatelessWidget {
         '/sedekah': (context) => const SedekahScreen(),
       },
 
-      // =====================================================
-      // 🛣️ CUSTOM ROUTE HANDLER
-      // =====================================================
+      //  CUSTOM ROUTE HANDLER
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case '/':
@@ -112,28 +96,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 💡 PENJELASAN
-// =====================================================
-//
-// 1. WidgetsFlutterBinding.ensureInitialized():
-//    - Memastikan Flutter sudah siap sebelum menggunakan plugins
-//    - WAJIB ada saat menggunakan async di main()
-//
-// 2. SharedPreferences.getInstance():
-//    - Ambil instance SharedPreferences
-//    - Cek apakah user sudah login atau belum
-//
-// 3. isLoggedIn ? const HomeScreen() : const SplashScreen():
-//    - Ternary operator untuk decide halaman pertama
-//    - Jika sudah login, langsung ke Home
-//    - Jika belum, ke Splash dulu (terus Login)
-//
-// 4. MyApp menerima parameter isLoggedIn:
-//    - Untuk determine halaman pertama aplikasi
-//
-// 5. onGenerateRoute:
-//    - Handle route yang tidak terdaftar
-//    - Juga check login status
-//
-// =====================================================

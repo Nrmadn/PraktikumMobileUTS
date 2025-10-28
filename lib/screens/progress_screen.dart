@@ -84,7 +84,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
       case 1:
         break;
       case 2:
-        Navigator.pushNamed(context, '/prayer_time');
+        Navigator.pushNamed(context, '/progress_home');
         break;
       case 3:
         Navigator.pushNamed(context, '/profile');
@@ -188,7 +188,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 Container(
                   padding: const EdgeInsets.all(paddingMedium),
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       colors: [primaryColor, primaryColorDark],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -326,7 +326,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                               value: getProgressToNextLevel(),
                               minHeight: 10,
                               backgroundColor: Colors.white.withOpacity(0.2),
-                              valueColor: AlwaysStoppedAnimation<Color>(
+                              valueColor: const AlwaysStoppedAnimation<Color>(
                                 accentColor,
                               ),
                             ),
@@ -493,12 +493,12 @@ class _ProgressScreenState extends State<ProgressScreen> {
                                                         : percentage >= 50
                                                             ? [
                                                                 accentColor,
-                                                                Color(
+                                                                const Color(
                                                                     0xFFFFA000)
                                                               ]
                                                             : [
                                                                 errorColor,
-                                                                Color(
+                                                                const Color(
                                                                     0xFFD32F2F)
                                                               ],
                                                 begin: Alignment.topCenter,
@@ -786,7 +786,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                                           size: iconSizeNormal,
                                         )
                                       else
-                                        Icon(
+                                        const Icon(
                                           Icons.lock,
                                           color: textColorLighter,
                                           size: iconSizeNormal,
@@ -819,7 +819,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                   ),
                   child: Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.lightbulb,
                         color: infoColor,
                         size: iconSizeMedium,
@@ -876,11 +876,11 @@ class _ProgressScreenState extends State<ProgressScreen> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Tentang Poin & Level'),
-        content: SingleChildScrollView(
+        content: const SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
-            children: const [
+            children: [
               Text(
                 'Cara Mendapat Poin:',
                 style: TextStyle(

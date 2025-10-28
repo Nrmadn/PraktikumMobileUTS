@@ -254,7 +254,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                   width: 100,
                                   height: 100,
                                   decoration: BoxDecoration(
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                       colors: [primaryColor, primaryColorDark],
                                       begin: Alignment.topLeft,
                                       end: Alignment.bottomRight,
@@ -279,12 +279,12 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                 
                                 // Title with gradient
                                 ShaderMask(
-                                  shaderCallback: (bounds) => LinearGradient(
+                                  shaderCallback: (bounds) => const LinearGradient(
                                     colors: [primaryColor, primaryColorDark],
                                   ).createShader(bounds),
-                                  child: Text(
+                                  child: const Text(
                                     loginTitle,
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 32,
                                       fontWeight: FontWeight.bold,
                                       color: textColorWhite,
@@ -295,7 +295,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                 
                                 const SizedBox(height: paddingSmall),
                                 
-                                Text(
+                                const Text(
                                   'Mulai perjalanan ibadah Anda hari ini ✨',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -384,7 +384,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                           : null,
                                     ),
                                     const SizedBox(width: 10),
-                                    Text(
+                                    const Text(
                                       'Ingat saya',
                                       style: TextStyle(
                                         color: textColor,
@@ -402,8 +402,8 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                               onPressed: () {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
-                                    content: Row(
-                                      children: const [
+                                    content: const Row(
+                                      children: [
                                         Icon(Icons.info_outline, color: Colors.white, size: 20),
                                         SizedBox(width: 12),
                                         Text('Fitur ini akan segera tersedia'),
@@ -424,7 +424,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                   vertical: 8,
                                 ),
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Lupa Password?',
                                 style: TextStyle(
                                   color: primaryColor,
@@ -477,7 +477,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             child: RichText(
                               text: TextSpan(
                                 text: 'Belum punya akun? ',
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: textColor,
                                   fontSize: 15,
                                   height: 1.5,
@@ -485,7 +485,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                 children: [
                                   TextSpan(
                                     text: 'Daftar Sekarang',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: primaryColor,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15,

@@ -121,8 +121,8 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
       if (!agreeToTerms) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Row(
-              children: const [
+            content: const Row(
+              children: [
                 Icon(Icons.warning_amber_rounded, color: Colors.white),
                 SizedBox(width: 12),
                 Expanded(
@@ -201,8 +201,8 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
           if (success) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Row(
-                  children: const [
+                content: const Row(
+                  children: [
                     Icon(Icons.check_circle_outline, color: Colors.white),
                     SizedBox(width: 12),
                     Expanded(
@@ -226,8 +226,8 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Row(
-                  children: const [
+                content: const Row(
+                  children: [
                     Icon(Icons.error_outline, color: Colors.white),
                     SizedBox(width: 12),
                     Text('Pendaftaran gagal. Silakan coba lagi.'),
@@ -322,7 +322,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                                   width: 100,
                                   height: 100,
                                   decoration: BoxDecoration(
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                       colors: [primaryColor, primaryColorDark],
                                       begin: Alignment.topLeft,
                                       end: Alignment.bottomRight,
@@ -348,12 +348,12 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                                 
                                 // Title with gradient
                                 ShaderMask(
-                                  shaderCallback: (bounds) => LinearGradient(
+                                  shaderCallback: (bounds) => const LinearGradient(
                                     colors: [primaryColor, primaryColorDark],
                                   ).createShader(bounds),
-                                  child: Text(
+                                  child: const Text(
                                     registerTitle,
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 32,
                                       fontWeight: FontWeight.bold,
                                       color: textColorWhite,
@@ -364,7 +364,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                                 
                                 const SizedBox(height: paddingSmall),
                                 
-                                Text(
+                                const Text(
                                   'Bergabunglah dengan komunitas ibadah ✨',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -439,7 +439,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
 
                         const SizedBox(height: paddingMedium),
 
-                        // ✅ TERMS & CONDITIONS - ENHANCED
+                        //  TERMS & CONDITIONS - ENHANCED
                         InkWell(
                           onTap: () {
                             setState(() {
@@ -479,8 +479,8 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                                     onTap: () {
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(
-                                          content: Row(
-                                            children: const [
+                                          content: const Row(
+                                            children: [
                                               Icon(Icons.info_outline, color: Colors.white, size: 20),
                                               SizedBox(width: 12),
                                               Text('Syarat & Ketentuan akan segera tersedia'),
@@ -496,14 +496,14 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                                       );
                                     },
                                     child: RichText(
-                                      text: TextSpan(
+                                      text: const TextSpan(
                                         text: 'Saya setuju dengan ',
                                         style: TextStyle(
                                           color: textColor,
                                           fontSize: 14,
                                           height: 1.5,
                                         ),
-                                        children: const [
+                                        children: [
                                           TextSpan(
                                             text: 'Syarat & Ketentuan',
                                             style: TextStyle(
@@ -564,7 +564,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                             child: RichText(
                               text: TextSpan(
                                 text: 'Sudah punya akun? ',
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: textColor,
                                   fontSize: 15,
                                   height: 1.5,
@@ -572,7 +572,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                                 children: [
                                   TextSpan(
                                     text: 'Masuk di sini',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: primaryColor,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15,

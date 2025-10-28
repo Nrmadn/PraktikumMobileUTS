@@ -126,7 +126,7 @@ class _SplashScreenState extends State<SplashScreen>
                           width: 140,
                           height: 140,
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [primaryColor, primaryColorDark],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
@@ -153,12 +153,12 @@ class _SplashScreenState extends State<SplashScreen>
 
                     // App Name dengan gradient
                     ShaderMask(
-                      shaderCallback: (bounds) => LinearGradient(
+                      shaderCallback: (bounds) => const LinearGradient(
                         colors: [primaryColor, primaryColorDark],
                       ).createShader(bounds),
-                      child: Text(
+                      child: const Text(
                         appName,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: fontSizeXLarge + 4,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -170,7 +170,7 @@ class _SplashScreenState extends State<SplashScreen>
                     const SizedBox(height: paddingSmall),
 
                     // Subtitle
-                    Text(
+                    const Text(
                       splashSubtitle,
                       style: TextStyle(
                         fontSize: fontSizeMedium,
@@ -184,7 +184,7 @@ class _SplashScreenState extends State<SplashScreen>
                     const SizedBox(height: paddingLarge * 2),
 
                     // Loading indicator dengan custom color
-                    SizedBox(
+                    const SizedBox(
                       width: 60,
                       height: 60,
                       child: CircularProgressIndicator(
@@ -200,7 +200,7 @@ class _SplashScreenState extends State<SplashScreen>
                     // Loading text
                     FadeTransition(
                       opacity: _fadeAnimation,
-                      child: Text(
+                      child: const Text(
                         'Memuat aplikasi...',
                         style: TextStyle(
                           fontSize: fontSizeSmall,
@@ -221,7 +221,7 @@ class _SplashScreenState extends State<SplashScreen>
               right: 0,
               child: FadeTransition(
                 opacity: _fadeAnimation,
-                child: Column(
+                child: const Column(
                   children: [
                     Text(
                       'Versi 1.0.0',
@@ -230,7 +230,7 @@ class _SplashScreenState extends State<SplashScreen>
                         color: textColorLighter,
                       ),
                     ),
-                    const SizedBox(height: paddingSmall),
+                    SizedBox(height: paddingSmall),
                     Text(
                       '© 2025 Target Ibadah Harian',
                       style: TextStyle(

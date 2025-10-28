@@ -67,7 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Navigator.pushNamed(context, '/progress');
         break;
       case 2: // Schedule
-        Navigator.pushNamed(context, '/prayer_time');
+        Navigator.pushNamed(context, '/progress_home');
         break;
       case 3: // Profile
         break;
@@ -101,6 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               await prefs.remove('userLevel');
               await prefs.remove('userPoints');
 
+              // ignore: use_build_context_synchronously
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
                   content: Text('Anda berhasil keluar'),
@@ -109,6 +110,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               );
               
+              // ignore: use_build_context_synchronously
               Navigator.pushReplacementNamed(context, '/login');
             },
             child: const Text('Keluar', style: TextStyle(color: errorColor)),
@@ -144,7 +146,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               //  PROFILE HEADER
               Container(
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [primaryColor, primaryColorDark],
                     begin: Alignment.topLeft,
@@ -392,9 +394,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         ],
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             appName,
                             style: TextStyle(

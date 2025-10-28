@@ -58,7 +58,7 @@ class _QuranScreenState extends State<QuranScreen> {
         Navigator.pushReplacementNamed(context, '/progress');
         break;
       case 2:
-        Navigator.pushReplacementNamed(context, '/prayer_time');
+        Navigator.pushReplacementNamed(context, '/progress_home');
         break;
       case 3:
         Navigator.pushReplacementNamed(context, '/profile');

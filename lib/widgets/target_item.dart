@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import '../models/target_ibadah_model.dart';
 
-// =====================================================
-// 🎯 TARGET ITEM WIDGET
-// =====================================================
+// TARGET ITEM WIDGET
 // Widget untuk menampilkan satu item target di list
 // Menampilkan: nama, kategori, checkbox, edit, delete
 
@@ -72,7 +70,7 @@ class TargetItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadiusNormal),
           // Tambahkan border di kiri jika completed
           border: isCompletedToday
-              ? Border(
+              ? const Border(
                   left: BorderSide(
                     color: successColor,
                     width: 4,
@@ -175,18 +173,19 @@ class TargetItem extends StatelessWidget {
                 ),
                 itemBuilder: (context) => [
                   PopupMenuItem(
-                    child: Row(
-                      children: const [
+                    onTap: onEdit,
+                    child: const Row(
+                      children: [
                         Icon(Icons.edit, size: 20),
                         SizedBox(width: 8),
                         Text('Edit'),
                       ],
-                    ),
-                    onTap: onEdit,
+                 ),
                   ),
                   PopupMenuItem(
-                    child: Row(
-                      children: const [
+                    onTap: onDelete,
+                    child: const Row(
+                      children: [
                         Icon(Icons.delete, size: 20, color: errorColor),
                         SizedBox(width: 8),
                         Text(
@@ -195,8 +194,7 @@ class TargetItem extends StatelessWidget {
                         ),
                       ],
                     ),
-                    onTap: onDelete,
-                  ),
+               ),
                 ],
               ),
             ],
@@ -207,10 +205,7 @@ class TargetItem extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 🎯 TARGET ITEM SKELETON/LOADING
-// =====================================================
-// Widget untuk menampilkan loading state
+//  TARGET ITEM SKELETON/LOADING
 
 class TargetItemSkeleton extends StatelessWidget {
   const TargetItemSkeleton({Key? key}) : super(key: key);
@@ -270,10 +265,7 @@ class TargetItemSkeleton extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 🎯 EMPTY STATE WIDGET
-// =====================================================
-// Widget untuk menampilkan empty state
+//  EMPTY STATE WIDGET
 
 class EmptyTargetState extends StatelessWidget {
   final String message;

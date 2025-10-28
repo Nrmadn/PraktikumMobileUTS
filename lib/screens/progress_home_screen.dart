@@ -14,7 +14,7 @@ class ProgressHomeScreen extends StatefulWidget {
 }
 
 class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
-  // 📋 VARIABLES
+  // VARIABLES
   int selectedNavIndex = 2;
   String selectedFilter = 'Semua';
   TextEditingController searchController = TextEditingController();
@@ -134,7 +134,7 @@ class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
     );
   }
 
-  // ✅ HANDLE EDIT TARGET - NAVIGASI BERFUNGSI
+  //  HANDLE EDIT TARGET - NAVIGASI BERFUNGSI
   void handleEditTarget(TargetIbadah target) {
     Navigator.pushNamed(
       context,
@@ -154,7 +154,7 @@ class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
     });
   }
 
-  // ✅ HANDLE ADD TARGET - NAVIGASI BERFUNGSI
+  //  HANDLE ADD TARGET - NAVIGASI BERFUNGSI
   void handleAddTarget() {
     Navigator.pushNamed(context, '/add_target').then((result) {
       // Jika ada result (data yang dikembalikan), tampilkan pesan
@@ -322,7 +322,7 @@ class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.task_alt,
                             size: 64,
                             color: textColorLighter,
@@ -332,7 +332,7 @@ class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
                             searchController.text.isNotEmpty
                                 ? 'Tidak ada target yang cocok'
                                 : 'Tidak ada target',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: fontSizeNormal,
                               color: textColorLight,
                             ),
@@ -363,7 +363,7 @@ class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
                               borderRadius: BorderRadius.circular(
                                   borderRadiusNormal),
                               side: isOverdue
-                                  ? BorderSide(color: errorColor, width: 2)
+                                  ? const BorderSide(color: errorColor, width: 2)
                                   : BorderSide.none,
                             ),
                             child: ListTile(
@@ -513,7 +513,7 @@ class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
                                     ),
                                     onTap: () {
                                       Future.delayed(
-                                        Duration(milliseconds: 100),
+                                        const Duration(milliseconds: 100),
                                         () => handleEditTarget(target),
                                       );
                                     },
@@ -531,7 +531,7 @@ class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
                                     ),
                                     onTap: () {
                                       Future.delayed(
-                                        Duration(milliseconds: 100),
+                                        const Duration(milliseconds: 100),
                                         () => handleDeleteTarget(target.id),
                                       );
                                     },
@@ -587,7 +587,7 @@ class _ProgressHomeScreenState extends State<ProgressHomeScreen> {
           ),
           Text(
             label,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: fontSizeSmall,
               color: textColorLight,
             ),

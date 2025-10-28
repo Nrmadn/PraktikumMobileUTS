@@ -147,7 +147,7 @@ const String targetDeleted = 'Target berhasil dihapus!';
 const String passwordChanged = 'Password berhasil diubah!';
 const String logoutConfirm = 'Apakah Anda yakin ingin keluar?';
 
-// 📏 UKURAN & SPACING
+// UKURAN & SPACING
 
 // Font Sizes
 const double fontSizeSmall = 12.0;
@@ -183,7 +183,7 @@ const double buttonHeightSmall = 36.0;
 const double buttonHeightNormal = 48.0;
 const double buttonHeightLarge = 56.0;
 
-// 🎨 THEME DATA
+// THEME DATA
 
 final ThemeData lightTheme = ThemeData(
   useMaterial3: true,

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
-// =====================================================
-// 🔘 CUSTOM BUTTON WIDGET
-// =====================================================
+//  CUSTOM BUTTON WIDGET
 // Widget tombol yang bisa digunakan di berbagai halaman
 // dengan style yang konsisten
 
@@ -88,10 +86,7 @@ class CustomButton extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 🔘 OUTLINED BUTTON VARIANT
-// =====================================================
-// Variant tombol dengan outline style
+//  OUTLINED BUTTON VARIANT
 
 class OutlinedCustomButton extends StatelessWidget {
   final String text;
@@ -161,10 +156,7 @@ class OutlinedCustomButton extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 🔘 TEXT BUTTON VARIANT
-// =====================================================
-// Variant tombol dengan style text (tanpa background)
+// TEXT BUTTON VARIANT
 
 class TextCustomButton extends StatelessWidget {
   final String text;
@@ -214,10 +206,7 @@ class TextCustomButton extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 🔘 ICON BUTTON VARIANT
-// =====================================================
-// Variant tombol hanya icon
+// ICON BUTTON VARIANT
 
 class IconCustomButton extends StatelessWidget {
   final IconData icon;

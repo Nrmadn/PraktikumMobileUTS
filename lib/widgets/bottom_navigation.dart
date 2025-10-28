@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
-// =====================================================
-// 🧭 BOTTOM NAVIGATION WIDGET
-// =====================================================
+// BOTTOM NAVIGATION WIDGET
 // Widget navigation bar di bagian bawah layar
 // Digunakan untuk navigate ke berbagai halaman
 
@@ -53,10 +51,7 @@ class BottomNavigation extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 🧭 CUSTOM BOTTOM NAVIGATION VARIANT
-// =====================================================
-// Variant custom dengan style yang lebih modern
+//  CUSTOM BOTTOM NAVIGATION VARIANT
 
 class CustomBottomNavigation extends StatelessWidget {
   final int currentIndex;
@@ -145,9 +140,7 @@ class CustomBottomNavigation extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 📋 BOTTOM NAV ITEM MODEL
-// =====================================================
+//  BOTTOM NAV ITEM MODEL
 
 class BottomNavItem {
   final IconData icon;

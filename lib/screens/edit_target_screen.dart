@@ -6,7 +6,7 @@ import '../widgets/custom_text_field.dart';
 
 // Halaman untuk mengedit target ibadah yang sudah ada
 // Input: Nama target, Kategori, Tanggal Target, Catatan (dari argument)
-// ✅ NAVIGASI BERFUNGSI, tapi tombol UPDATE menampilkan pesan demo
+// NAVIGASI BERFUNGSI, tapi tombol UPDATE menampilkan pesan demo
 
 class EditTargetScreen extends StatefulWidget {
   const EditTargetScreen({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class EditTargetScreen extends StatefulWidget {
 }
 
 class _EditTargetScreenState extends State<EditTargetScreen> {
-  // 📋 VARIABLES
+  //  VARIABLES
   late TextEditingController nameController;
   late TextEditingController noteController;
   late TargetIbadah targetData;
@@ -74,7 +74,7 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
     return null;
   }
 
-  // 📅 DATE PICKER
+  //  DATE PICKER
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
@@ -102,7 +102,7 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
     }
   }
 
-  // 📅 FORMAT TANGGAL
+  //  FORMAT TANGGAL
   String _formatDate(DateTime date) {
     final months = [
       'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
@@ -111,15 +111,15 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
     return '${date.day} ${months[date.month - 1]} ${date.year}';
   }
 
-  // ✅ UPDATE TARGET FUNCTION - TAMPILKAN PESAN DEMO
+  //  UPDATE TARGET FUNCTION - TAMPILKAN PESAN DEMO
   void handleUpdateTarget() {
     if (_formKey.currentState!.validate()) {
       // Tampilkan pesan bahwa fitur ini adalah demo
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Row(
-            children: const [
+          title: const Row(
+            children: [
               Icon(Icons.info_outline, color: warningColor),
               SizedBox(width: paddingSmall),
               Text('Mode Demo'),
@@ -176,7 +176,7 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
 
                   const SizedBox(height: paddingMedium),
 
-                  // 🎯 KATEGORI DROPDOWN
+                  //  KATEGORI DROPDOWN
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -221,7 +221,7 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
 
                   const SizedBox(height: paddingMedium),
 
-                  // 📅 TANGGAL TARGET
+                  //  TANGGAL TARGET
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -279,7 +279,7 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
 
                   const SizedBox(height: paddingMedium),
 
-                  // 📝 CATATAN INPUT (Optional)
+                  //  CATATAN INPUT (Optional)
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -329,7 +329,7 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
 
                   const SizedBox(height: paddingLarge),
 
-                  // 👁️ INFORMASI TARGET
+                  //  INFORMASI TARGET
                   Container(
                     padding: const EdgeInsets.all(paddingMedium),
                     decoration: BoxDecoration(
@@ -433,7 +433,7 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
 
                   const SizedBox(height: paddingLarge),
 
-                  // ⚠️ INFO DEMO MODE
+                  //  INFO DEMO MODE
                   Container(
                     padding: const EdgeInsets.all(paddingMedium),
                     decoration: BoxDecoration(
@@ -441,18 +441,18 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
                       borderRadius: BorderRadius.circular(borderRadiusNormal),
                       border: Border.all(color: warningColor),
                     ),
-                    child: Row(
+                    child: const Row(
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.info_outline,
                           color: warningColor,
                           size: iconSizeNormal,
                         ),
-                        const SizedBox(width: paddingSmall),
+                        SizedBox(width: paddingSmall),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
                                 'Mode Demo',
                                 style: TextStyle(
@@ -478,7 +478,7 @@ class _EditTargetScreenState extends State<EditTargetScreen> {
 
                   const SizedBox(height: paddingLarge),
 
-                  // 🔘 ACTION BUTTONS
+                  //  ACTION BUTTONS
                   Row(
                     children: [
                       Expanded(

@@ -15,7 +15,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // 📋 VARIABLES
+  //  VARIABLES
   int selectedNavIndex = 0;
   String userName = 'User';
   bool isLoadingUser = true;
@@ -103,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Navigator.pushNamed(context, '/progress');
         break;
       case 2: // Manajemen Target
-        Navigator.pushNamed(context, '/prayer_time');
+        Navigator.pushNamed(context, '/progress_home');
         break;
       case 3: // Profile
         Navigator.pushNamed(context, '/profile');
@@ -168,9 +168,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
     // Loading state
     if (isLoadingData) {
-      return Scaffold(
+      return const Scaffold(
         backgroundColor: backgroundColor,
-        body: const Center(
+        body: Center(
           child: CircularProgressIndicator(),
         ),
       );
@@ -219,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   child: Container(
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         colors: [primaryColor, primaryColorDark],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
@@ -413,8 +413,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   borderRadius:
                                       BorderRadius.circular(borderRadiusSmall),
                                 ),
-                                child: Row(
-                                  children: const [
+                                child: const Row(
+                                  children: [
                                     Icon(Icons.celebration,
                                         color: successColor, size: 16),
                                     SizedBox(width: paddingSmall),
@@ -539,7 +539,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         TextButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/prayer_time');
+                            Navigator.pushNamed(context, '/progress_home');
                           },
                           child: const Text(
                             'Kelola Target',
@@ -577,7 +577,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   TextButton.icon(
                                     onPressed: () {
                                       Navigator.pushNamed(
-                                          context, '/prayer_time');
+                                          context, '/progress_home');
                                     },
                                     icon: const Icon(Icons.add),
                                     label: const Text('Tambah Target'),

@@ -5,7 +5,7 @@ import '../widgets/custom_text_field.dart';
 
 // Halaman untuk menambah target ibadah baru
 // Input: Nama target, Kategori, Tanggal Target, Catatan
-// ✅ NAVIGASI BERFUNGSI, tapi tombol SIMPAN menampilkan pesan demo
+//  NAVIGASI BERFUNGSI, tapi tombol SIMPAN menampilkan pesan demo
 
 class AddTargetScreen extends StatefulWidget {
   const AddTargetScreen({Key? key}) : super(key: key);
@@ -100,8 +100,8 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Row(
-            children: const [
+          title: const Row(
+            children: [
               Icon(Icons.info_outline, color: warningColor),
               SizedBox(width: paddingSmall),
               Text('Mode Demo'),
@@ -147,7 +147,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // 📝 NAMA TARGET INPUT
+                  //  NAMA TARGET INPUT
                   CustomTextField(
                     label: targetName,
                     hint: 'Contoh: Sholat Subuh tepat waktu',
@@ -158,7 +158,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
 
                   const SizedBox(height: paddingMedium),
 
-                  // 🎯 KATEGORI DROPDOWN
+                  //  KATEGORI DROPDOWN
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -203,7 +203,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
 
                   const SizedBox(height: paddingMedium),
 
-                  // 📅 TANGGAL TARGET
+                  //  TANGGAL TARGET
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -261,7 +261,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
 
                   const SizedBox(height: paddingMedium),
 
-                  // 📝 CATATAN INPUT (Optional)
+                  //  CATATAN INPUT (Optional)
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -311,7 +311,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
 
                   const SizedBox(height: paddingLarge),
 
-                  // 👁️ CATEGORY PREVIEW
+                  //  CATEGORY PREVIEW
                   Container(
                     padding: const EdgeInsets.all(paddingMedium),
                     decoration: BoxDecoration(
@@ -402,7 +402,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
 
                   const SizedBox(height: paddingLarge),
 
-                  // ⚠️ INFO DEMO MODE
+                  //  INFO DEMO MODE
                   Container(
                     padding: const EdgeInsets.all(paddingMedium),
                     decoration: BoxDecoration(
@@ -410,18 +410,18 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
                       borderRadius: BorderRadius.circular(borderRadiusNormal),
                       border: Border.all(color: warningColor),
                     ),
-                    child: Row(
+                    child: const Row(
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.info_outline,
                           color: warningColor,
                           size: iconSizeNormal,
                         ),
-                        const SizedBox(width: paddingSmall),
+                        SizedBox(width: paddingSmall),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
                                 'Mode Demo',
                                 style: TextStyle(
@@ -447,7 +447,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
 
                   const SizedBox(height: paddingLarge),
 
-                  // 🔘 ACTION BUTTONS
+                  //  ACTION BUTTONS
                   Row(
                     children: [
                       Expanded(

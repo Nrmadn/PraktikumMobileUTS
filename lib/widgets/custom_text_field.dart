@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
-// =====================================================
-// 📝 CUSTOM TEXT FIELD WIDGET
-// =====================================================
+// CUSTOM TEXT FIELD WIDGET
 // Widget text field yang bisa digunakan di berbagai halaman
 // dengan style yang konsisten
 
@@ -173,10 +171,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
   }
 }
 
-// =====================================================
-// 📝 SEARCH TEXT FIELD VARIANT
-// =====================================================
-// Variant text field khusus untuk search
+//  SEARCH TEXT FIELD VARIAN
 
 class SearchTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -242,10 +237,7 @@ class SearchTextField extends StatelessWidget {
   }
 }
 
-// =====================================================
-// 📝 TEXTAREA WIDGET
-// =====================================================
-// Widget untuk input text area (multiple lines)
+//  TEXTAREA WIDGET
 
 class TextArea extends StatelessWidget {
   final String label;

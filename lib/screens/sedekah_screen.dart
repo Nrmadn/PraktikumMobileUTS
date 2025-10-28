@@ -72,7 +72,7 @@ class _SedekahScreenState extends State<SedekahScreen> {
         Navigator.pushReplacementNamed(context, '/progress');
         break;
       case 2:
-        Navigator.pushReplacementNamed(context, '/prayer_time');
+        Navigator.pushReplacementNamed(context, '/progress_home');
         break;
       case 3:
         Navigator.pushReplacementNamed(context, '/profile');
@@ -159,7 +159,7 @@ class _SedekahScreenState extends State<SedekahScreen> {
                 Container(
                   padding: const EdgeInsets.all(paddingMedium),
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       colors: [primaryColor, primaryColorDark],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,

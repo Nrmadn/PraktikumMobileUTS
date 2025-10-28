@@ -65,7 +65,7 @@ class _DzikirScreenState extends State<DzikirScreen> {
         Navigator.pushReplacementNamed(context, '/progress');
         break;
       case 2:
-        Navigator.pushReplacementNamed(context, '/prayer_time');
+        Navigator.pushReplacementNamed(context, '/progress_home');
         break;
       case 3:
         Navigator.pushReplacementNamed(context, '/profile');
@@ -284,7 +284,7 @@ class _DzikirScreenState extends State<DzikirScreen> {
                         width: 250,
                         height: 250,
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [primaryColor, primaryColorDark],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,

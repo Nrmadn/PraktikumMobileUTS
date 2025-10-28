@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import '../widgets/bottom_navigation.dart';
 
-// =====================================================
-// ⚙️ SETTING SCREEN
-// =====================================================
+// SETTING SCREEN
 // Halaman untuk pengaturan aplikasi
 // Menampilkan: Tema, Notifikasi, Bahasa, Tentang Aplikasi
 
@@ -16,9 +14,7 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-  // =====================================================
-  // 📋 VARIABLES
-  // =====================================================
+  // VARIABLES
   int selectedNavIndex = 4; // Setting
   
   // Setting values
@@ -27,9 +23,7 @@ class _SettingScreenState extends State<SettingScreen> {
   bool motivationNotificationEnabled = true;
   String selectedLanguage = 'Bahasa Indonesia';
 
-  // =====================================================
-  // 📝 HANDLE NAVIGATION
-  // =====================================================
+  //  HANDLE NAVIGATION
   void handleNavigation(int index) {
     setState(() {
       selectedNavIndex = index;
@@ -43,7 +37,7 @@ class _SettingScreenState extends State<SettingScreen> {
         Navigator.pushNamed(context, '/progress');
         break;
       case 2: // Schedule
-        Navigator.pushNamed(context, '/prayer_time');
+        Navigator.pushNamed(context, '/progress_home');
         break;
       case 3: // Profile
         Navigator.pushNamed(context, '/profile');
@@ -69,9 +63,7 @@ class _SettingScreenState extends State<SettingScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // =====================================================
-                // 🎨 APPEARANCE SECTION
-                // =====================================================
+                // APPEARANCE SECTION
                 _buildSectionTitle('Tampilan'),
                 const SizedBox(height: paddingNormal),
                 
@@ -100,9 +92,7 @@ class _SettingScreenState extends State<SettingScreen> {
 
                 const SizedBox(height: paddingLarge),
 
-                // =====================================================
-                // 🔔 NOTIFICATION SECTION
-                // =====================================================
+                //  NOTIFICATION SECTION
                 _buildSectionTitle(notificationLabel),
                 const SizedBox(height: paddingNormal),
 
@@ -156,9 +146,7 @@ class _SettingScreenState extends State<SettingScreen> {
 
                 const SizedBox(height: paddingLarge),
 
-                // =====================================================
-                // 🌐 LANGUAGE SECTION
-                // =====================================================
+                //  LANGUAGE SECTION
                 _buildSectionTitle(languageLabel),
                 const SizedBox(height: paddingNormal),
 
@@ -204,9 +192,7 @@ class _SettingScreenState extends State<SettingScreen> {
 
                 const SizedBox(height: paddingLarge),
 
-                // =====================================================
-                // 📋 ABOUT SECTION
-                // =====================================================
+                //  ABOUT SECTION
                 _buildSectionTitle('Tentang'),
                 const SizedBox(height: paddingNormal),
 
@@ -271,9 +257,7 @@ class _SettingScreenState extends State<SettingScreen> {
 
                 const SizedBox(height: paddingLarge),
 
-                // =====================================================
-                // 💡 INFO BOX
-                // =====================================================
+                // INFO BOX
                 Container(
                   padding: const EdgeInsets.all(paddingMedium),
                   decoration: BoxDecoration(
@@ -281,10 +265,10 @@ class _SettingScreenState extends State<SettingScreen> {
                     borderRadius: BorderRadius.circular(borderRadiusNormal),
                     border: Border.all(color: infoColor),
                   ),
-                  child: Column(
+                  child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         '💡 Tips:',
                         style: TextStyle(
                           fontSize: fontSizeNormal,
@@ -292,8 +276,8 @@ class _SettingScreenState extends State<SettingScreen> {
                           color: textColor,
                         ),
                       ),
-                      const SizedBox(height: paddingSmall),
-                      const Text(
+                      SizedBox(height: paddingSmall),
+                      Text(
                         'Pastikan notifikasi diaktifkan agar Anda tidak melewatkan waktu sholat dan pesan motivasi setiap hari.',
                         style: TextStyle(
                           fontSize: fontSizeSmall,
@@ -307,18 +291,16 @@ class _SettingScreenState extends State<SettingScreen> {
 
                 const SizedBox(height: paddingLarge),
 
-                // =====================================================
-                // 🎯 BUILD INFO
-                // =====================================================
+                //  BUILD INFO
                 Container(
                   padding: const EdgeInsets.all(paddingMedium),
                   decoration: BoxDecoration(
                     color: dividerColor,
                     borderRadius: BorderRadius.circular(borderRadiusNormal),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Column(
-                      children: const [
+                      children: [
                         Text(
                           appName,
                           style: TextStyle(
@@ -347,9 +329,7 @@ class _SettingScreenState extends State<SettingScreen> {
         ),
       ),
 
-      // =====================================================
-      // 🧭 BOTTOM NAVIGATION
-      // =====================================================
+      //  BOTTOM NAVIGATION
       bottomNavigationBar: BottomNavigation(
         currentIndex: selectedNavIndex,
         onTap: handleNavigation,
@@ -357,9 +337,7 @@ class _SettingScreenState extends State<SettingScreen> {
     );
   }
 
-  // =====================================================
-  // 🛠️ HELPER WIDGETS
-  // =====================================================
+  //  HELPER WIDGETS
 
   Widget _buildSectionTitle(String title) {
     return Text(
@@ -418,33 +396,3 @@ class _SettingScreenState extends State<SettingScreen> {
   }
 }
 
-// =====================================================
-// 📝 PENJELASAN
-// =====================================================
-//
-// 1. Appearance Section:
-//    - Toggle dark mode
-//    - Switch untuk activate/deactivate
-//
-// 2. Notification Section:
-//    - Toggle notifikasi waktu sholat
-//    - Toggle notifikasi motivasi
-//    - User bisa pilih mana yang mau diaktifkan
-//
-// 3. Language Section:
-//    - Dropdown untuk pilih bahasa
-//    - Ada Bahasa Indonesia, English, Arabic
-//
-// 4. About Section:
-//    - Versi aplikasi
-//    - Syarat & Ketentuan
-//    - Kebijakan Privasi
-//
-// 5. _buildSectionTitle():
-//    - Helper untuk judul section yang konsisten
-//
-// 6. _buildSettingItem():
-//    - Helper untuk item setting yang konsisten
-//    - Title, subtitle, dan trailing widget
-//
-// =====================================================
